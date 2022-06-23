@@ -41,7 +41,7 @@ jobs:
       - name: Run a databricks notebook
         uses: databricks/run-notebook@v0
         with:
-           workspace-notebook-path: "/Repos/abraham.pabbathi@databricks.com/github-actions/sales-datamart/01-extract-data"
+           workspace-notebook-path: "/Users/abraham.pabbathi@databricks.com/00-jobs/test/job-test-nb"
            databricks-host: https://adb-2541733722036151.11.azuredatabricks.net
            databricks-token: ${{ secrets.DATABRICKS_TOKEN }}
            git-commit: ${{ github.event.pull_request.head.sha }}
