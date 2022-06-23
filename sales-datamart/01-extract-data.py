@@ -14,4 +14,5 @@ df.createOrReplaceTempView("flights_tmp")
 # COMMAND ----------
 
 # MAGIC %sql
+# MAGIC -- sample query
 # MAGIC select count(*) from flights_tmp
