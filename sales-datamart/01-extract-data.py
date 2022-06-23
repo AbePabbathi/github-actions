@@ -9,6 +9,7 @@ df.count()
 
 # COMMAND ----------
 
+# create temp view
 df.createOrReplaceTempView("flights_tmp")
 
 # COMMAND ----------
