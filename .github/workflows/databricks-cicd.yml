@@ -38,11 +38,12 @@ jobs:
             -d 'client_secret=${{ secrets.AZURE_SP_CLIENT_SECRET }}' |  jq -r  '.access_token')" >> $GITHUB_ENV
 
       # Runs a set of commands using the runners shell
-      - name: Run a databricks notebook
+      - name: Run ETL function Build
         uses: databricks/run-notebook@v0
         with:
-           workspace-notebook-path: "/Users/abraham.pabbathi@databricks.com/00-jobs/test/job-test-nb"
+           workspace-notebook-path: "/Users/abraham.pabbathi@databricks.com/00-jobs/build/build-etl-functions"
            databricks-host: https://adb-2541733722036151.11.azuredatabricks.net
            databricks-token: ${{ secrets.DATABRICKS_TOKEN }}
            git-commit: ${{ github.event.pull_request.head.sha }}
            existing-cluster-id: "0325-161631-ydbwxav4"
+         
