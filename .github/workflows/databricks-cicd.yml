@@ -41,7 +41,7 @@ jobs:
       - name: Run ETL function Build
         uses: databricks/run-notebook@v0
         with:
-           workspace-notebook-path: "/Users/abraham.pabbathi@databricks.com/00-jobs/build/build-etl-functions"
+           workspace-notebook-path: "/Users/abraham.pabbathi@databricks.com/00-jobs/test2/job-test-nb"
            databricks-host: https://adb-2541733722036151.11.azuredatabricks.net
            databricks-token: ${{ secrets.DATABRICKS_TOKEN }}
            git-commit: ${{ github.event.pull_request.head.sha }}
