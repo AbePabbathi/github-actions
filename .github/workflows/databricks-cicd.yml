@@ -57,5 +57,6 @@ jobs:
             {
               "num_workers": 1,
               "spark_version": "10.4.x-scala2.12",
-              "node_type_id": "Standard_D3_v2"
+              "node_type_id": "Standard_D3_v2",
+              "libraries": [ { "whl": "dbfs:/mnt/files/abe/libs/latest/etl_functions-0.0.1-py3-none-any.whl" }]
             }
