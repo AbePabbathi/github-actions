@@ -55,8 +55,7 @@ jobs:
            git-commit: ${{ github.event.pull_request.head.sha }}
            libraries-json: >
             [
-              { "whl": "dbfs:/mnt/files/abe/libs/latest/etl_functions-0.0.1-py3-none-any.whl" },
-              { "pypi": "mlflow" }
+              { "whl": "dbfs:/mnt/files/abe/libs/latest/etl_functions-0.0.1-py3-none-any.whl" }
             ]
            new-cluster-json: >
             {
