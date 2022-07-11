@@ -53,10 +53,14 @@ jobs:
            databricks-host: https://adb-2541733722036151.11.azuredatabricks.net
            databricks-token: ${{ secrets.DATABRICKS_TOKEN }}
            git-commit: ${{ github.event.pull_request.head.sha }}
+           libraries-json: >
+            [
+              { "whl": "dbfs:/mnt/files/abe/libs/latest/etl_functions-0.0.1-py3-none-any.whl" },
+              { "pypi": "mlflow" }
+            ]
            new-cluster-json: >
             {
               "num_workers": 1,
               "spark_version": "10.4.x-scala2.12",
-              "node_type_id": "Standard_D3_v2",
-              "libraries": [ { "whl": "dbfs:/mnt/files/abe/libs/latest/etl_functions-0.0.1-py3-none-any.whl" }]
+              "node_type_id": "Standard_D3_v2"
             }
